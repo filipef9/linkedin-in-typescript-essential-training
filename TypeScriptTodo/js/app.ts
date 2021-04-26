@@ -1,6 +1,7 @@
 var container = document.getElementById('container');
 
-function countdown(initial, final = 0, interval = 1) {
+// Default parameters
+/*function countdown(initial, final = 0, interval = 1) {
     var current = initial;
 
     while (current > final) {
@@ -9,4 +10,21 @@ function countdown(initial, final = 0, interval = 1) {
     }
 }
 
-countdown(40, 0, 1);
+countdown(40, 0, 1);*/
+
+// Template strings
+var todo = {
+    id: 123,
+    name: 'Pick up drycleaning',
+    completed: true
+};
+
+//var displayName = `Todo #${todo.id}`;
+//container.innerHTML = displayName;
+
+container.innerHTML = `
+    <div todo="${todo.id}" class="list-group-item">
+        <i class="${todo.completed ? '' : 'hidden'} text-success glyphicon glyphicon-ok"></i>
+        <span class="name">${todo.name}</span>
+    </div>
+`;
