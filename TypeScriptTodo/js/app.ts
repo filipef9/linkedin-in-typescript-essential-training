@@ -9,4 +9,4 @@ function countdown(initial, final = 0, interval = 1) {
     }
 }
 
-countdown(10);
+countdown(1, 0, 40);

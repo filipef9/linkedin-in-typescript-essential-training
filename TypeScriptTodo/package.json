@@ -1,0 +1,17 @@
+{
+  "name": "typescript-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-dev": "./node_modules/.bin/tsc -p ./js -w",
+    "dev": "./node_modules/.bin/browser-sync start --server --no-ui --host '0.0.0.0'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "typescript": "^1.8.2"
+  }
+}
