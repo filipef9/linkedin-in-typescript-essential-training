@@ -38,9 +38,25 @@ var todo = {
     let counter = x;
 }*/
 
-for (var x = 0; x <= 5; x++) {
+/*for (var x = 0; x <= 5; x++) {
     const counter = x;
     counter = 1;
 }
 
-console.log(counter);
+console.log(counter);*/
+
+// -> For...of loops
+const array = [
+    'Pick up drycleaning',
+    'Clean Batcave',
+    'Save Gotham'
+];
+
+for (let index in array) {
+    let value = array[index];
+    console.log(`${index}: ${value}`);
+}
+
+for (var value of array) {
+    console.log(`${value}`);
+}
