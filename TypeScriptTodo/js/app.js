@@ -129,36 +129,32 @@ const { id, title, completed } = getTodo(123);*/
 
 countdown({initial: 0, final: 0, interval: 1});*/
 // -> The spread operator
-function add() {
-    var values = Array.prototype.splice.call(arguments, [1]), total = 0;
-    for (var _i = 0, values_1 = values; _i < values_1.length; _i++) {
-        var value = values_1[_i];
+/*function add() {
+    let values = Array.prototype.splice.call(arguments, [1]),
+        total = 0;
+
+    for (let value of values) {
         total += value;
     }
+
     return total;
-}
-;
-var add2 = function () {
-    var values = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        values[_i - 0] = arguments[_i];
-    }
-    var total = 0;
-    for (var _a = 0, values_2 = values; _a < values_2.length; _a++) {
-        var value = values_2[_a];
+};
+
+const add2 = (...values) => {
+    let total = 0;
+
+    for (let value of values) {
         total += value;
     }
+
     return total;
 };
 add2(1, 2, 3, 4);
-var add3 = function (action) {
-    var values = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        values[_i - 1] = arguments[_i];
-    }
-    var total = 0;
-    for (var _a = 0, values_3 = values; _a < values_3.length; _a++) {
-        var value = values_3[_a];
+
+const add3 = (action, ...values) => {
+    let total = 0;
+
+    for (let value of values) {
         switch (action) {
             case 'add':
                 total += value;
@@ -170,11 +166,24 @@ var add3 = function (action) {
                 console.log('invalid action');
         }
     }
+
     return total;
 };
 add3('subtract', 1, 2, 3, 4, 5);
-var source = [3, 4, 5];
-var target = [1, 2].concat(source, [6, 7]);
-var list = [1, 2, 3];
-var toAdd = [4, 5, 6];
-list.push.apply(list, toAdd);
+
+const source = [3, 4, 5];
+const target = [1, 2, ...source, 6, 7];
+
+const list = [1, 2, 3];
+const toAdd = [4, 5, 6];
+list.push(...toAdd);*/
+// -> Computed properties
+var isSupported = function (os) { return Math.random() >= 0.5; };
+var osPrefix = 'os_';
+var support = (_a = {},
+    _a[osPrefix + 'iOS'] = isSupported('iOS'),
+    _a[osPrefix + 'Windows'] = isSupported('Windows'),
+    _a[osPrefix + 'Android'] = isSupported('Android'),
+    _a
+);
+var _a;

@@ -144,7 +144,7 @@ const { id, title, completed } = getTodo(123);*/
 countdown({initial: 0, final: 0, interval: 1});*/
 
 // -> The spread operator
-function add() {
+/*function add() {
     let values = Array.prototype.splice.call(arguments, [1]),
         total = 0;
 
@@ -191,4 +191,14 @@ const target = [1, 2, ...source, 6, 7];
 
 const list = [1, 2, 3];
 const toAdd = [4, 5, 6];
-list.push(...toAdd);
+list.push(...toAdd);*/
+
+// -> Computed properties
+const isSupported = (os) => Math.random() >= 0.5;
+const osPrefix = 'os_';
+const support = {
+    [osPrefix + 'iOS']: isSupported('iOS'),
+    [osPrefix + 'Windows']: isSupported('Windows'),
+    [osPrefix + 'Android']: isSupported('Android')
+};
+
