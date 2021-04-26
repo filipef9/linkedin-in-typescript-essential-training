@@ -129,9 +129,7 @@ const { id, title, completed } = todo;*/
 
 const { id, title, completed } = getTodo(123);*/
 
-
-
-function countdown({ 
+/*function countdown({ 
     initial, 
     final: final = 0, 
     interval: interval = 1, 
@@ -142,3 +140,55 @@ function countdown({
         current -= interval;
     }
 }
+
+countdown({initial: 0, final: 0, interval: 1});*/
+
+// -> The spread operator
+function add() {
+    let values = Array.prototype.splice.call(arguments, [1]),
+        total = 0;
+
+    for (let value of values) {
+        total += value;
+    }
+
+    return total;
+};
+
+const add2 = (...values) => {
+    let total = 0;
+
+    for (let value of values) {
+        total += value;
+    }
+
+    return total;
+};
+add2(1, 2, 3, 4);
+
+const add3 = (action, ...values) => {
+    let total = 0;
+
+    for (let value of values) {
+        switch (action) {
+            case 'add':
+                total += value;
+                break;
+            case 'subtract':
+                total -= value;
+                break;
+            default:
+                console.log('invalid action');
+        }
+    }
+
+    return total;
+};
+add3('subtract', 1, 2, 3, 4, 5);
+
+const source = [3, 4, 5];
+const target = [1, 2, ...source, 6, 7];
+
+const list = [1, 2, 3];
+const toAdd = [4, 5, 6];
+list.push(...toAdd);
