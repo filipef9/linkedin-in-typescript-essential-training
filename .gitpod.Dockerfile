@@ -7,4 +7,4 @@ RUN bash -c ". .nvm/nvm.sh \
 
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 
-RUN bash -c "npm install -g typescript@1.8.2 lite-server@1.3.4"
+RUN bash -c "npm install -g typescript@1.8.2 browser-sync@2.11.1"
