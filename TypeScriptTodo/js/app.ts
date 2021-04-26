@@ -13,11 +13,11 @@ var container = document.getElementById('container');
 countdown(40, 0, 1);*/
 
 // -> Template strings
-var todo = {
+/*var todo = {
     id: 123,
     name: 'Pick up drycleaning',
     completed: true
-};
+};*/
 
 //var displayName = `Todo #${todo.id}`;
 //container.innerHTML = displayName;
@@ -86,7 +86,7 @@ for (var value of array) {
     });
 }*/
 
-function Counter(el) {
+/*function Counter(el) {
     this.count = 0;
 
     el.innerHTML = this.count;
@@ -99,4 +99,46 @@ function Counter(el) {
 
 new Counter(container);
 
-const filtered = [1, 2, 3].filter(x => x > 0);
+const filtered = [1, 2, 3].filter(x => x > 0);*/
+
+// -> Destructuring
+/*const array = [123, 'Pick up drycleaning', false];
+const [id, title, completed] = array;
+
+let a = 1;
+let b = 5;
+[a, b] = [b, a];
+
+const todo = {
+    id: 123,
+    title: 'Pick up drycleaning',
+    completed: false
+};
+
+const { id, title, completed } = todo;*/
+
+/*function getTodo(id) {
+    const todo = {
+        id: 123,
+        title: 'Pick up drycleaning',
+        completed: false
+    }; 
+
+    return todo;
+}
+
+const { id, title, completed } = getTodo(123);*/
+
+
+
+function countdown({ 
+    initial, 
+    final: final = 0, 
+    interval: interval = 1, 
+    initial: current 
+}) {
+    while (current > final) {
+        container.innerHTML = current;
+        current -= interval;
+    }
+}
