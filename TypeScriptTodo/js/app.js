@@ -8,4 +8,4 @@ function countdown(initial, final, interval) {
         current -= interval;
     }
 }
-countdown(1, 0, 40);
+countdown(40, 0, 1);

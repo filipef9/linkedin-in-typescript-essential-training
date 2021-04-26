@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-dev": "./node_modules/.bin/tsc -p ./js -w",
-    "dev": "./node_modules/.bin/browser-sync start --server --no-ui --host '0.0.0.0'"
+    "dev": "./node_modules/.bin/browser-sync start --server --no-ui --host '0.0.0.0' --watch"
   },
   "keywords": [],
   "author": "",
