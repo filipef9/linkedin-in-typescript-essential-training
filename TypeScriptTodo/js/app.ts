@@ -46,7 +46,7 @@ var todo = {
 console.log(counter);*/
 
 // -> For...of loops
-const array = [
+/*const array = [
     'Pick up drycleaning',
     'Clean Batcave',
     'Save Gotham'
@@ -59,4 +59,44 @@ for (let index in array) {
 
 for (var value of array) {
     console.log(`${value}`);
+}*/
+
+// -> Lambdas
+/*function Counter(el) {
+    this.count = 0;
+
+    el.innerHTML = this.count;
+
+    el.addEventListener('click', function () {
+        this.count += 1;
+        el.innerHTML = this.count;
+    });
+}*/
+
+/*function Counter(el) {
+    this.count = 0;
+
+    el.innerHTML = this.count;
+
+    let _this = this;
+
+    el.addEventListener('click', function () {
+        _this.count += 1;
+        el.innerHTML = _this.count;
+    });
+}*/
+
+function Counter(el) {
+    this.count = 0;
+
+    el.innerHTML = this.count;
+
+    el.addEventListener('click', () => {
+        this.count += 1;
+        el.innerHTML = this.count;
+    });
 }
+
+new Counter(container);
+
+const filtered = [1, 2, 3].filter(x => x > 0);

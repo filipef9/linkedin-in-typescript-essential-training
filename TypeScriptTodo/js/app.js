@@ -38,16 +38,51 @@ var todo = {
 
 console.log(counter);*/
 // -> For...of loops
-var array = [
+/*const array = [
     'Pick up drycleaning',
     'Clean Batcave',
     'Save Gotham'
 ];
-for (var index in array) {
-    var value_1 = array[index];
-    console.log(index + ": " + value_1);
+
+for (let index in array) {
+    let value = array[index];
+    console.log(`${index}: ${value}`);
 }
-for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
-    var value = array_1[_i];
-    console.log("" + value);
+
+for (var value of array) {
+    console.log(`${value}`);
+}*/
+// -> Lambdas
+/*function Counter(el) {
+    this.count = 0;
+
+    el.innerHTML = this.count;
+
+    el.addEventListener('click', function () {
+        this.count += 1;
+        el.innerHTML = this.count;
+    });
+}*/
+/*function Counter(el) {
+    this.count = 0;
+
+    el.innerHTML = this.count;
+
+    let _this = this;
+
+    el.addEventListener('click', function () {
+        _this.count += 1;
+        el.innerHTML = _this.count;
+    });
+}*/
+function Counter(el) {
+    var _this = this;
+    this.count = 0;
+    el.innerHTML = this.count;
+    el.addEventListener('click', function () {
+        _this.count += 1;
+        el.innerHTML = _this.count;
+    });
 }
+new Counter(container);
+var filtered = [1, 2, 3].filter(function (x) { return x > 0; });
