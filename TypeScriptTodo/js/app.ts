@@ -1,6 +1,6 @@
 var container = document.getElementById('container');
 
-// Default parameters
+// -> Default parameters
 /*function countdown(initial, final = 0, interval = 1) {
     var current = initial;
 
@@ -12,7 +12,7 @@ var container = document.getElementById('container');
 
 countdown(40, 0, 1);*/
 
-// Template strings
+// -> Template strings
 var todo = {
     id: 123,
     name: 'Pick up drycleaning',
@@ -22,9 +22,25 @@ var todo = {
 //var displayName = `Todo #${todo.id}`;
 //container.innerHTML = displayName;
 
-container.innerHTML = `
+/*container.innerHTML = `
     <div todo="${todo.id}" class="list-group-item">
         <i class="${todo.completed ? '' : 'hidden'} text-success glyphicon glyphicon-ok"></i>
         <span class="name">${todo.name}</span>
     </div>
-`;
+`;*/
+
+// -> Let and const
+/*for (var x = 0; x <= 5; x++) {
+    var counter = x;
+}*/
+
+/*for (var x = 0; x <= 5; x++) {
+    let counter = x;
+}*/
+
+for (var x = 0; x <= 5; x++) {
+    const counter = x;
+    counter = 1;
+}
+
+console.log(counter);
