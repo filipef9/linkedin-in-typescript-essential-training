@@ -1,21 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typescript Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <h1>Typescript Todo List</h1>
+      </div>
+      <div class="row">
+        <div class="panel panel-default clearfix">
+          <div class="panel-body">
+            <div class="row">
+              <div class="todo-list col-md-12">
+                <!-- Todo Items rendered here -->
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-md-10">
+                <!-- Add Todo -->
+                <form class="add-todo">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-btn"
+                        ><button type="submit" class="btn btn-primary input-lg">
+                          Add
+                        </button>
+                      </span>
+                      <input
+                        type="text"
+                        class="form-control input-lg"
+                        placeholder="What do you need to get done?"
+                      />
+                    </div>
+                  </div>
+                </form>
+                <!-- /Add Todo -->
+              </div>
 
-<head>
-    <title>TypeScript Todo App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-</head>
-
-<body>
-    <div id="container" class="container">
+              <div class="col-md-2">
+                <!-- Clear completed button -->
+                <button
+                  class="clear-completed btn btn-sm btn-warning pull-right"
+                >
+                  Clear Completed
+                </button>
+                <!-- /Clear completed button -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
-</body>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/TodoListComponent.js"></script>
+    <script src="js/TodoService.js"></script>
+    <script src="js/TodoApp.js"></script>
+    <script type="text/javascript">
+      new TodoApp(document, [
+        "Pick up drycleaning",
+        "Clean Batcave",
+        "Save Gotham",
+      ]);
+    </script>
+  </body>
 </html>
