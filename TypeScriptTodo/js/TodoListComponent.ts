@@ -1,4 +1,6 @@
-class TodoListComponent {
+import { Todo } from "./Model.js";
+
+export class TodoListComponent {
   private $el: JQuery; 
 
   constructor(el: HTMLElement) {

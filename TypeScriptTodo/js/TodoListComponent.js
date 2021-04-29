@@ -1,8 +1,8 @@
-var TodoListComponent = (function () {
-    function TodoListComponent(el) {
+export class TodoListComponent {
+    constructor(el) {
         this.$el = $(el);
     }
-    TodoListComponent.prototype.render = function (todos) {
+    render(todos) {
         this.$el.html("");
         if (!todos.length) {
             this.$el.html("<div class='list-group-item text-center text-giant'>" +
@@ -10,12 +10,12 @@ var TodoListComponent = (function () {
                 "</div>");
             return;
         }
-        for (var index in todos) {
-            var todo = todos[index];
+        for (let index in todos) {
+            let todo = todos[index];
             this.renderTodo(todo).appendTo(this.$el);
         }
-    };
-    TodoListComponent.prototype.renderTodo = function (todo) {
+    }
+    renderTodo(todo) {
         return $("<div class='todo-item list-group-item " +
             (todo.state == 2 ? "completed" : "") +
             "'>" +
@@ -39,6 +39,5 @@ var TodoListComponent = (function () {
             event.initCustomEvent("todo-toggle", true, true, { todoId: todo.id });
             this.dispatchEvent(event);
         });
-    };
-    return TodoListComponent;
-}());
+    }
+}

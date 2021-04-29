@@ -1,6 +1,7 @@
-var TodoApp = (function () {
-    function TodoApp(el, todos) {
-        this.todos = todos;
+import { TodoListComponent } from "./TodoListComponent.js";
+import { TodoService } from "./TodoService.js";
+export class TodoApp {
+    constructor(el, todos) {
         this.clearCompleted = function () {
             this.todoService.clearCompleted();
             this.renderTodos();
@@ -8,19 +9,19 @@ var TodoApp = (function () {
         this.todoService = new TodoService(todos);
         this.initialize(el);
     }
-    TodoApp.prototype.addTodo = function (todoName) {
+    addTodo(todoName) {
         this.todoService.add(todoName);
         this.renderTodos();
-    };
-    TodoApp.prototype.toggleTodoState = function (todoId) {
+    }
+    toggleTodoState(todoId) {
         this.todoService.toggle(todoId);
         this.renderTodos();
-    };
-    TodoApp.prototype.renderTodos = function () {
+    }
+    renderTodos() {
         var todos = this.todoService.getAll();
         this.todoList.render(todos);
-    };
-    TodoApp.prototype.initialize = function (el) {
+    }
+    initialize(el) {
         var _this = this;
         var addTodoFormEl = el.getElementsByClassName("add-todo")[0], addTodoNameEl = addTodoFormEl.getElementsByTagName("input")[0], todoListEl = el.getElementsByClassName("todo-list")[0], clearCompletedEl = el.getElementsByClassName("clear-completed")[0];
         addTodoFormEl.addEventListener("submit", function (event) {
@@ -38,6 +39,5 @@ var TodoApp = (function () {
         });
         this.todoList = new TodoListComponent(todoListEl);
         this.renderTodos();
-    };
-    return TodoApp;
-}());
+    }
+}

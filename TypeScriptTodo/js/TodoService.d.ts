@@ -1,13 +1,5 @@
-interface Todo {
-    id: number;
-    name: string;
-    state: TodoState;
-}
-declare enum TodoState {
-    Active = 1,
-    Complete = 2,
-}
-interface ITodoService {
+import { Todo } from "./Model.js";
+export interface ITodoService {
     add(todo: Todo): Todo;
     add(todo: String): Todo;
     clearCompleted(): void;
@@ -15,12 +7,9 @@ interface ITodoService {
     getById(todoId: number): Todo;
     toggle(todoId: number): void;
 }
-declare class TodoService implements ITodoService {
-    private static _lastId;
+export declare class TodoService implements ITodoService {
     private todos;
     constructor(todos: Todo[]);
-    private static generateTodoId();
-    private static clone<T>(src);
     add(todo: Todo): Todo;
     add(todo: string): Todo;
     clearCompleted(): void;

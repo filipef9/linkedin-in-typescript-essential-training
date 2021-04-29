@@ -1,8 +1,11 @@
-class TodoApp {
+import { TodoListComponent } from "./TodoListComponent.js";
+import { ITodoService, TodoService } from "./TodoService.js";
+
+export class TodoApp {
   private todoService: ITodoService;
   private todoList: any;
 
-  constructor(el, private todos: Todo[]) {
+  constructor(el, todos) {
     this.todoService = new TodoService(todos);
     this.initialize(el);
   }
