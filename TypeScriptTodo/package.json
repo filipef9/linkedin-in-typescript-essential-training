@@ -4,15 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-dev": "./node_modules/.bin/tsc -p ./js -w",
-    "dev": "./node_modules/.bin/browser-sync start --server --no-ui --host '0.0.0.0' --watch"
+    "build": "./node_modules/.bin/webpack",
+    "start:dev": "./node_modules/.bin/webpack-dev-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "typescript": "^1.8.2",
-    "typings": "^2.1.1"
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "typings": "^2.1.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^1.10.36",
+    "jquery": "^1.12.4"
   }
 }

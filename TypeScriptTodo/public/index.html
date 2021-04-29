@@ -46,7 +46,7 @@
                 </form>
                 <!-- /Add Todo -->
               </div>
-
+              
               <div class="col-md-2">
                 <!-- Clear completed button -->
                 <button
@@ -62,19 +62,7 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script defer type="module" src="./js/TodoListComponent.js"></script>
-    <script defer type="module" src="./js/TodoService.js"></script>
-    <script defer type="module" src="./js/TodoApp.js"></script>
-    <script defer type="module">
-      import { TodoApp } from './js/TodoApp.js';
-
-      new TodoApp(document, [
-        "Pick up drycleaning",
-        "Clean Batcave",
-        "Save Gotham",
-      ]);
-    </script>
+    <!-- add scripts here -->
+    <script src="bundle.js"></script>
   </body>
 </html>

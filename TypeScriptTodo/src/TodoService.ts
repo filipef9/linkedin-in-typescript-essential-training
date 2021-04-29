@@ -1,4 +1,4 @@
-import { Todo, TodoState } from "./Model.js";
+import { Todo, TodoState } from "./Model";
 
 export interface ITodoService {
   add(todo: Todo): Todo;

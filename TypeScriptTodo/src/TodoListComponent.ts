@@ -1,4 +1,5 @@
-import { Todo } from "./Model.js";
+import { Todo } from "./Model";
+import * as $ from "jquery";
 
 export class TodoListComponent {
   private $el: JQuery; 

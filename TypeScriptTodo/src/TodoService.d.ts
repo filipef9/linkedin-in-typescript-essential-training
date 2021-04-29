@@ -1,4 +1,4 @@
-import { Todo } from "./Model.js";
+import { Todo } from "./Model";
 export interface ITodoService {
     add(todo: Todo): Todo;
     add(todo: String): Todo;
@@ -16,5 +16,5 @@ export declare class TodoService implements ITodoService {
     getAll(): Todo[];
     getById(todoId: number): Todo;
     toggle(todoId: any): void;
-    private _find(todoId);
+    private _find;
 }

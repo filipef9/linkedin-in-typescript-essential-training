@@ -1,5 +1,5 @@
-import { TodoListComponent } from "./TodoListComponent.js";
-import { ITodoService, TodoService } from "./TodoService.js";
+import { TodoListComponent } from "./TodoListComponent";
+import { ITodoService, TodoService } from "./TodoService";
 
 export class TodoApp {
   private todoService: ITodoService;

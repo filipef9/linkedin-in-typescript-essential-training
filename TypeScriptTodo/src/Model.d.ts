@@ -5,5 +5,5 @@ export interface Todo {
 }
 export declare enum TodoState {
     Active = 1,
-    Complete = 2,
+    Complete = 2
 }
