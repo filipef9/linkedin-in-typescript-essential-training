@@ -1,6 +1,10 @@
 const path = require('path');
 
 module.exports = {
+    devtool: 'eval-source-map',
+
+    watch: true,
+
     entry: './src/index.ts',
     module: {
         rules: [
@@ -21,6 +25,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'public'),
-        watchContentBase: true
+        watchContentBase: true,
+        index: 'index.html'
     }
 }
