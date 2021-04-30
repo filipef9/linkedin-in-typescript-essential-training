@@ -20,3 +20,4 @@ export interface IValidator {
 export declare function validate(): IValidationResult[];
 export declare function validatable(target: Function): void;
 export declare function required(target: Object, propertyName: string): void;
+export declare function regex(pattern: string): (target: Object, propertyName: string) => void;
